@@ -1,25 +1,27 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
+    "tsBuildInfoFile": ".cache/tsconfig.tsbuildinfo",
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "paths": {
+      "@/*": ["./src/*"],
+      "#/*": ["./scripts/*"]
+    }
   },
-  "include": ["src"]
+  "types": [
+    "vite-plugin-terminal/client",
+    "bun",
+    "node"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "files": []
 }

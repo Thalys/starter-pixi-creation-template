@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+\.cache
 
 # Editor directories and files
 .vscode/*
@@ -24,5 +25,5 @@ dist-ssr
 *.sw?
 
 public/assets
-.assetpack
+\.assetpack
 src/manifest.json
