@@ -1,15 +1,19 @@
-# starter-pixi-creation-template
+# Starter pixi Creation Template Project
 
 Starter bootstrapped with `npm create pixi.js@latest`
 
-To install dependencies:
+## Pre-requisites
+
+- bun
+- git lfs
+
+## Starting
 
 ```sh
+# Ensure git lfs is installed first
+git lfs install
+# Install deps
 bun i
-```
-
-To start a development server:
-
-```bash
+# Run
 bun dev
 ```

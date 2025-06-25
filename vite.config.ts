@@ -2,6 +2,7 @@ import type { Plugin } from 'vite'
 import path, { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import devtoolsJson from 'vite-plugin-devtools-json'
+import glsl from 'vite-plugin-glsl'
 import terminal from 'vite-plugin-terminal'
 import { assetpackPlugin } from './scripts/assetpack-vite-plugin'
 
@@ -46,13 +47,15 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '∆': path.resolve(__dirname, './src/engine'),
+      '@': path.resolve(__dirname, './src/app'),
       '#': path.resolve(__dirname, './scripts'),
     },
   },
 
   plugins: [
     devtoolsJson(),
+    glsl(),
     terminal(),
     refreshOnTsChange(),
     assetpackPlugin()

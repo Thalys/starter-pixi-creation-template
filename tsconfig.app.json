@@ -1,5 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.core.json",
   "compilerOptions": {
     // "Please don't shove this anywhere and place at the defined cache folder"
     "tsBuildInfoFile": ".cache/tsconfig.app.tsbuildinfo",
@@ -7,44 +8,11 @@
     // #Target for generation of output JS
     "target": "ES2020",
     // Allow use of the latest ECMAScript features
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "moduleDetection": "force",
-    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "DOM.AsyncIterable"],
 
-    "baseUrl": ".",
+    "outDir": "./dist-app",
 
-    // Browser is target so use latest standard (get's transpiled according to #Target)
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-
-    "paths": {
-      "@/*": ["./src/*"],
-      "#/*": ["./scripts/*"]
-    },
-
-    "resolveJsonModule": true,
-    "types": [
-      "vite-plugin-terminal/client",
-      "bun",
-      "node"
-    ],
-    "allowImportingTsExtensions": true,
-
-    "allowJs": true,
-    "checkJs": true,
-
-    // Disabled strict mode until code is stable
-    "strict": false,
-    "noFallthroughCasesInSwitch": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-
-    "noEmit": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "noUncheckedSideEffectImports": false,
-    "skipLibCheck": true
+    "erasableSyntaxOnly": false
   },
   "include": ["src/**/*"],
   "exclude": [

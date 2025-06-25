@@ -1,20 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.core.json",
   "compilerOptions": {
-    "tsBuildInfoFile": ".cache/tsconfig.tsbuildinfo",
-
-    "baseUrl": ".",
-    "rootDir": "./src",
-    "paths": {
-      "@/*": ["./src/*"],
-      "#/*": ["./scripts/*"]
-    }
+    "tsBuildInfoFile": ".cache/tsconfig.tsbuildinfo"
   },
-  "types": [
-    "vite-plugin-terminal/client",
-    "bun",
-    "node"
-  ],
   "references": [
     {
       "path": "./tsconfig.app.json"

@@ -1,6 +1,5 @@
+import type { CreationEngine } from '∆/index'
 import type { Ticker } from 'pixi.js'
-import type { CreationEngine } from '../engine'
-
 import { Assets, BigPool, Container } from 'pixi.js'
 
 /** Interface for app screens */
@@ -78,7 +77,7 @@ export class Navigation {
     // Add screen to stage
     this.container.addChild(screen)
 
-    // Setup things and pre-organise screen before showing
+    // Setup things and pre-organize screen before showing
     if (screen.prepare) {
       screen.prepare()
     }

@@ -1,51 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.core.json",
   "compilerOptions": {
     // "Please don't shove this anywhere and place at the defined cache folder"
-    "tsBuildInfoFile": ".cache/tsconfig.node.tsbuildinfo",
-
-    // #Target for generation of output JS
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "moduleDetection": "force",
-    "useDefineForClassFields": true,
-
-    "baseUrl": ".",
-
-    // Browser is target so use latest standard (get's transpiled according to #Target)
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-
-    "paths": {
-      "@/*": ["./src/*"],
-      "#/*": ["./scripts/*"]
-    },
-
-    "resolveJsonModule": true,
-    "types": [
-      "vite-plugin-terminal/client",
-      "bun",
-      "node"
-    ],
-    "allowImportingTsExtensions": true,
-
-    "allowJs": true,
-    "checkJs": true,
-
-    // Disabled strict mode until code is stable
-    "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-
-    "noEmit": true,
-    "outDir": "./dist",
-    "noUncheckedSideEffectImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "erasableSyntaxOnly": true,
-    "skipLibCheck": true
+    "tsBuildInfoFile": ".cache/tsconfig.node.tsbuildinfo"
   },
   "include": [
     "vite.config.ts",

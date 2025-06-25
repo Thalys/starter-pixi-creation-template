@@ -1,8 +1,6 @@
+import type { CreationEngine } from '∆/index'
 import type { Application, ExtensionMetadata } from 'pixi.js'
-import type { CreationEngine } from '../engine'
-
 import { ExtensionType } from 'pixi.js'
-
 import { Navigation } from './navigation'
 
 /**
