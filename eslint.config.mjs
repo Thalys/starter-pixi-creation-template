@@ -1,6 +1,5 @@
 import antfu from '@antfu/eslint-config'
 import command from 'eslint-plugin-command/config'
-// import html from '@html-eslint/eslint-plugin'
 
 export default antfu(
   {
@@ -78,44 +77,4 @@ export default antfu(
     ]
   },
   command(),
-  // TODO: enable
-  // HTML specific config:
-  // {
-  //   name: 'project:html-linting', // Optional: for easier debugging with --inspect-config
-  //   files: ['**/*.html', 'src/**/*.html'], // Target HTML files
-  //   plugins: {
-  //     html, // Register the plugin
-  //   },
-  //   language: 'html/html', // Specify the language for ESLint [10]
-  //   rules: {
-  //     ...html.configs['flat/recommended'].rules,
-  //     // Style Rules
-  //     'html/indent': ['error', 2], // Enforce 2-space indentation [11]
-  //     'html/quotes': ['error', 'double'], // Enforce double quotes for attributes for consistency [11]
-  //     'html/no-trailing-spaces': 'error', // Disallow trailing whitespace [11]
-  //     'html/element-newline': 'warn', // Encourage newlines between elements for readability [11]
-  //     'html/attrs-newline': ['warn', { maxAttrs: 3 }], // Newlines for attributes if many, for readability [11]
-  //     'html/no-extra-spacing-attrs': 'error', // Disallow extra spaces around attributes [11]
-  //     'html/lowercase': 'error', // Enforce lowercase tag and attribute names [11]
-
-  //     // Best Practices
-  //     'html/require-closing-tags': ['error', { selfClosing: 'always' }], // Enforce proper closing tags [11]
-  //     'html/no-obsolete-tags': 'error', // Disallow obsolete HTML5 elements [11]
-  //     'html/no-duplicate-attrs': 'error', // Prevent duplicate attributes [11]
-  //     'html/no-duplicate-id': 'error', // Prevent duplicate IDs [11]
-  //     'html/no-inline-styles': 'warn', // Discourage inline styles for better CSS management [11]
-  //     'html/require-doctype': 'error', // Ensure DOCTYPE is present [11]
-
-  //     // Accessibility (Crucial for UI elements in games)
-  //     'html/require-img-alt': 'error', // Require alt text for images [11]
-  //     'html/require-input-label': 'error', // Require labels for form inputs [11]
-  //     'html/no-positive-tabindex': 'error', // Disallow positive tabindex values [11]
-  //     'html/no-accesskey-attrs': 'warn', // Discourage accesskey due to potential conflicts [11]
-  //     'html/require-frame-title': 'error', // Require titles for iframes [11]
-
-  //     // SEO (Less critical for internal game UI, but good for web-facing pages if any)
-  //     'html/require-title': 'warn', // Require a <title> tag [11]
-  //     'html/require-lang': 'warn', // Require lang attribute on <html> [11]
-  //   },
-  // },
 )
